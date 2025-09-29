@@ -1,0 +1,14 @@
+fetch('/api/submitCounselingForm', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    name,
+    number,
+    email,
+    course,
+    state,
+    city,
+    profession,
+    gender
+  })
+})
