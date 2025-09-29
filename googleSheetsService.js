@@ -25,7 +25,8 @@ const sheets = google.sheets({ version: 'v4', auth });
 
 async function appendRow(data) {
   const spreadsheetId = process.env.SPREADSHEET_ID;
-  const range = process.env.SHEET_RANGE || 'Sheet1!A1';
+  const sheetName = process.env.SHEET_NAME || 'Sheet1';
+  const range = `${sheetName}!A1`;
   // Add timestamp as first column
   const timestamp = new Date().toISOString();
   const row = [timestamp, data.name, data.number, data.email, data.course, data.state, data.city, data.profession, data.gender];
