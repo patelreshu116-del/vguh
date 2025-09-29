@@ -1,0 +1,14 @@
+# Ignore environment variable files
+.env
+.env.*
+# Ignore Google credentials files
+*.json
+# Node modules
+node_modules/
+# Logs
+logs
+*.log
+npm-debug.log*
+# OS files
+.DS_Store
+Thumbs.db
